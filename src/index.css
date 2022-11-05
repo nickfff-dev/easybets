@@ -1,13 +1,211 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 300;
+  src: url("./fonts/Poppins/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: Poppins;
+  font-weight: 400;
+  src: url("./fonts/Poppins/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: Poppins;
+  font-weight: 500;
+  src: url("./fonts/Poppins/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: Poppins;
+  font-weight: 600;
+  src: url("./fonts/Poppins/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: Poppins;
+  font-weight: 700;
+  src: url("./fonts/Poppins/Poppins-Bold.ttf");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+html body {
+  @apply font-body antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply font-display;
+}
+
+
+:root {
+  --font-display: Poppins;
+  --font-body: Poppins;
+}
+
+.theme-animals {
+  --font-display: Inter;
+  --font-body: Inter;
+}
+.nc-MainNav1.notOnTop {
+  @apply bg-white dark:bg-neutral-900 backdrop-blur-2xl bg-opacity-70 dark:bg-opacity-60 shadow-sm dark:border-b dark:border-neutral-700;
+}
+
+
+
+
+
+
+
+
+.nc-SectionClientSay .glide__bullet--active {
+  @apply bg-neutral-700;
+}
+
+.nc-GallerySlider .glide__bullet--active {
+  @apply bg-white w-2 h-2;
+}
+
+.nc-card-title {
+  @apply transition-colors  hover:text-primary-900 dark:hover:text-primary-300 duration-75;
+}
+
+.nc-PostCardCommentBtn:hover span,
+.nc-PostCardLikeAction:hover span,
+.nc-CommentCardLikeReply > button:hover span {
+  color: inherit;
+}
+
+.nc-box-has-hover {
+  @apply bg-white rounded-3xl border border-neutral-200/70 hover:bg-neutral-50 hover:shadow-xl hover:border-transparent transition-shadow;
+}
+
+.nc-dark-box-bg-has-hover {
+  @apply dark:bg-neutral-900 dark:border dark:border-neutral-700 dark:hover:bg-neutral-800 dark:hover:shadow-2xl;
+}
+
+.nc-dark-box-bg {
+  @apply dark:bg-neutral-900 dark:border dark:border-neutral-700 dark:shadow-2xl;
+}
+
+.nc-origin-100 {
+  transform-origin: 100% 50% 0px;
+}
+
+.nc-origin-50 {
+  transform-origin: 50% 50% 0px;
+}
+
+.nc-hero-field-padding {
+  @apply py-3 px-4 md:py-4 md:px-6 xl:py-6 xl:px-8;
+}
+
+.nc-hero-field-focused {
+  @apply shadow-2xl rounded-full dark:bg-white/5;
+}
+
+.nc-flex-1 {
+  flex: 1 0 0%;
+}
+
+.nc-flex-1\.5 {
+  flex: 1.5 0 0%;
+}
+
+.nc-flex-1\.5-auto {
+  flex: 1.5 0 auto;
+}
+
+.nc-flex-2 {
+  flex: 2 0 0%;
+}
+
+.nc-flex-2-auto {
+  flex: 2 0 auto;
+}
+
+.nc-flex-2\.5 {
+  flex: 2.5 0 0%;
+}
+
+@screen lg {
+  .lg\:nc-flex-1\.5 {
+    flex: 1.5 0 0%;
+  }
+
+  .lg\:nc-flex-1\.5-auto {
+    flex: 1.5 0 auto;
+  }
+
+  .lg\:nc-flex-2 {
+    flex: 2 0 0%;
+  }
+
+  .lg\:nc-flex-2-auto {
+    flex: 2 0 auto;
+  }
+
+  .lg\:nc-flex-2\.5 {
+    flex: 2.5 0 0%;
+  }
+}
+.nc-icon-field {
+  @apply w-5 h-5 lg:w-7 lg:h-7;
+}
+
+button.gm-control-active.gm-fullscreen-control {
+  @apply rounded-xl !important;
+}
+
+.nc-FiveStartIconForRate svg:hover ~ svg {
+  @apply text-neutral-300;
+}
+
+.listingSection__wrap {
+  @apply w-full flex flex-col sm:rounded-2xl border-b sm:border-t sm:border-l sm:border-r border-neutral-200 dark:border-neutral-700 space-y-6 sm:space-y-8 pb-10 px-0 sm:p-4 xl:p-8;
+}
+
+input[type=time]::-webkit-calendar-picker-indicator {
+  @apply dark:bg-neutral-500 rounded-md;
+}
+
+[type=button] {
+  -webkit-appearance: none !important;
+}
+
+.nc-CardLarge1--hasAnimation .nc-CardLarge1__left {
+  animation-name: CardLarge1ExampleLeft;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+}
+.nc-CardLarge1--hasAnimation .nc-CardLarge1__right {
+  animation-name: CardLarge1ExampleRight;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes CardLarge1ExampleRight {
+  from {
+    transform: scale(1.05) translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes CardLarge1ExampleLeft {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
