@@ -1,13 +1,13 @@
 import React, { FC } from "react";
 import SwitchDarkMode from "./SwitchDarkMode"
 import Button from "./Button";
-
+import { Link } from "react-router-dom";
 
 export interface HeaderProps { }
 const Header: FC<HeaderProps> =() =>{
   return (
    
-      <div className={`nc-MainNav2 dark:bg-neutral-900 relative z-10 ${"onTop "}`}>
+      <div className={`nc-MainNav2 bg-neutral-100/80 dark:bg-neutral-900 relative z-10 ${"onTop "}`}>
       <div className="container py-5 relative flex justify-between items-center space-x-4 xl:space-x-8">
         <div className="flex justify-start flex-grow items-center space-x-3 sm:space-x-8 lg:space-x-10">
         <a
@@ -29,7 +29,7 @@ const Header: FC<HeaderProps> =() =>{
               className="px-4 py-2 sm:px-5"
            
             >
-              New Bet
+             <Link to="/new-bet"> New Bet</Link>
             </button>
             <Button
               className="ttnc-ButtonSecondary border bg-white border-neutral-200 text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800"

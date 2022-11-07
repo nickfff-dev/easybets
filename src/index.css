@@ -46,6 +46,7 @@ h4 {
 :root {
   --font-display: Poppins;
   --font-body: Poppins;
+  overflow-x: hidden;
 }
 
 .theme-animals {
