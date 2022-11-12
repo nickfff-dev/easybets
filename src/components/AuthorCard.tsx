@@ -24,7 +24,7 @@ const AuthorCard: FC<AuthorCardProps> = ({ className = "", name = "", image = ""
 
        <div className="relative flex-shrink-0 h-36"><div className="nc-NcImage flex h-full w-full flex-shrink-0 rounded-3xl overflow-hidden"><img className="object-cover w-full h-full" src={image} /></div> </div>
         <div className="mt-2.5 flex flex-col items-center justify-between">
-          <h2 className={`text-base font-semibold flex items-center dark:text-white`}>
+          <h2 className={`text-base font-semibold  text-[#04868b] flex items-center dark:text-white`}>
 
             {name}
           </h2>
