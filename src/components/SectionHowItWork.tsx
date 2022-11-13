@@ -43,7 +43,7 @@ const SectionHowItWork: FC<SectionHowItWorkProps> = ({
   className = "bg-neutral-100/80 dark:bg-neutral-900",
   data = DEMO_DATA,
 }) => {
-  return (<>
+  return (
       <div
       className={`nc-SectionHowItWork  ${className}`}
       data-nc-id="SectionHowItWork"
@@ -61,7 +61,7 @@ const SectionHowItWork: FC<SectionHowItWorkProps> = ({
             className="relative flex flex-col items-center max-w-xs mx-auto"
             >
               <div className="mb-5 sm:mb-10 lg:mb-20 max-w-[100px] mx-auto">    <img src={item.img} alt={item.title} /></div>
-              <span className="nc-Badge inline-flex px-2.5 py-1 mb-4 rounded-full font-medium text-xs bg-pink-100">{`Step: ${item.id}` }</span>
+              <span className="nc-Badge inline-flex px-2.5 py-1 mb-4 rounded-full text-white font-medium text-xs bg-[#f0909b]">{`Step: ${item.id}` }</span>
               <div className="text-center mt-auto space-y-5">
                 <h3 className="text-lg font-semibold text-[#04868b] dark:text-white">{item.title}</h3>
                 <span className="block text-neutral-500 dark:text-neutral-400">
@@ -76,7 +76,7 @@ const SectionHowItWork: FC<SectionHowItWorkProps> = ({
 
     </div>
   
-  </>)
+)
  }
 
 

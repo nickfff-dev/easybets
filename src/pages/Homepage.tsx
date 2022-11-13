@@ -21,7 +21,7 @@ const Homepage: FC<HomepageProps> = ({ className = "bg-neutral-100/80 dark:bg-ne
         <SectionHero2 />
         
       </div>
-      <div className="bg-[neutral-50] dark:bg-neutral-800 lg:mb-20 lg:p-12 text-center"><h1 className="font-semibold text-4xl text-[#04868b] dark:text-white  md:text-5xl xl:text-6xl ">How It Works</h1>
+      <div className="bg-neutral-50 dark:bg-neutral-800 lg:mb-20 lg:p-12 text-center"><h1 className="font-semibold text-4xl text-[#04868b] dark:text-white  md:text-5xl xl:text-6xl ">How It Works</h1>
         <SectionHowItWork className="mt-8 lg:mt-8 xl:mt-12" /></div>
       
       <div className="relative py-10 lg:py-18 ">
