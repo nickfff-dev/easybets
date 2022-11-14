@@ -11,7 +11,7 @@ const SectionSubscribe: FC<SectionSubscribeProps> = ({ className = "dark:text-wh
   return (
     <div className={`relative flex flex-col lg:flex-row lg:items-center ${className}`}>
       <div className="flex-shrink-0 mb-10 lg:mb-0 lg:mr-10 lg:w-2/5 p-12">
-      <h2 className="font-semibold text-4xl text-[#04868b]">Never miss a drop!</h2>
+      <h2 className="font-semibold text-4xl text-[#04868b] dark:text-white">Never miss a drop!</h2>
         <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
           Subcribe to our super-exclusive drop list and be the first to know
           abour upcoming features and trending bets.
