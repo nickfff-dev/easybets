@@ -1,13 +1,16 @@
 
 
-import React,{useEffect, useState} from "react";
+import { useEffect, useState,FC } from "react";
 
+export interface TimeCountdownProps { 
+    endDate: string
+}
 
-const TimeCountDown = (props: any) => {
+const TimeCountDown: FC<TimeCountdownProps> = ({endDate}) => {
   const calculateTimeLeft = () => {
 
   
-    let endDatecalc = new Date(props.endDate);
+    let endDatecalc = new Date(endDate);
     console.log(endDatecalc);
     let differences = endDatecalc.getTime() - new Date().getTime();
   

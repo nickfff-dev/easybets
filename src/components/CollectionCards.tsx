@@ -26,7 +26,7 @@ const CollectionCards: FC<CollectionCardsProps> = ({ className = "",  gridClassN
             name={item.title}
             image={item.image}
             stake={item.stake}
-          
+            id = {item.id}
             status={item.status}
             endDate={item.endDate}
             startDate={item.startDate}

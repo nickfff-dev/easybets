@@ -14,8 +14,8 @@ const widgetMenus: WidgetFooterMenu[] = [
     title: "Getting started",
     menus: [
       { href: "#", label: "Connect" },
-      { href: "#", label: "Create" },
-      { href: "#", label: "Explore" },
+      { href: "/new-bet", label: "Create" },
+      { href: "/", label: "Explore" },
     ],
   },
 

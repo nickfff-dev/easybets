@@ -1,6 +1,6 @@
 const data = [{
   id: 1,
-  title: 'Who Will Win The Election?',
+  title: 'Who Will Win The Election',
   description: "Odds for current events entail betting lines on any outcome that is expected to occur today or in the near future by a person or nation’s actions. These lines are mostly contained within the sphere of entertainment betting and can include prop bets and futures odds or something so niche like legal celebrity wedding betting odds.",
   image: 'https://images.pexels.com/photos/8089969/pexels-photo-8089969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   stake: '1.549',
@@ -12,7 +12,7 @@ const data = [{
   {
     
     id: 2,
-    title: 'Who Will Win The War?',
+    title: 'Who Will Win The War',
     description: "Odds for current events entail betting lines on any outcome that is expected to occur today or in the near future by a person or nation’s actions. These lines are mostly contained within the sphere of entertainment betting and can include prop bets and futures odds or something so niche like legal celebrity wedding betting odds.",
     image: 'https://images.pexels.com/photos/8089969/pexels-photo-8089969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     stake: '1.549',
@@ -35,7 +35,7 @@ const data = [{
   {
     
     id: 4,
-    title: 'When Is the World Going to End?',
+    title: 'When Is the World Going to End',
     description: "Odds for current events entail betting lines on any outcome that is expected to occur today or in the near future by a person or nation’s actions. These lines are mostly contained within the sphere of entertainment betting and can include prop bets and futures odds or something so niche like legal celebrity wedding betting odds.",
     image: 'https://images.pexels.com/photos/88652/pexels-photo-88652.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     stake: '1.549',

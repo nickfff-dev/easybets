@@ -6,6 +6,8 @@ import SectionHero2 from "../components/SectionHero2"
 import SectionHowItWork from "../components/SectionHowItWork";
 import CollectionCards from "../components/CollectionCards";
 import SectionSubscribe from "../components/SectionSubscribe";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 
 export interface HomepageProps { 
@@ -14,6 +16,7 @@ export interface HomepageProps {
 
 const Homepage: FC<HomepageProps> = ({ className = "bg-neutral-100/80 dark:bg-neutral-900" }) =>{
   return (
+
     <div className={`nc-PageHome overflow-hidden ${className}`}>
        <BgGlassmorphism/>
     
@@ -33,7 +36,8 @@ const Homepage: FC<HomepageProps> = ({ className = "bg-neutral-100/80 dark:bg-ne
         <BackgroundSection />
         <SectionSubscribe />
       </div>
-    </div>
+      </div>
+      
   )
  }
 

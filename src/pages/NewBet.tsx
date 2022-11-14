@@ -4,6 +4,7 @@ import Button from "../components/Button";
 import BgGlassmorphism from "../components/BgGlassMorphism"
 
 
+
 export interface NewBetProps { 
 
   className?: string;
@@ -13,6 +14,7 @@ const NewBet: FC<NewBetProps> = ({ className = "bg-neutral-100/80 dark:bg-neutra
   const [betName, setBetName] = useState("");
   
   return (
+
     <div className={`p-20 ${className}`}>
       
       <BgGlassmorphism/>
@@ -53,6 +55,7 @@ const NewBet: FC<NewBetProps> = ({ className = "bg-neutral-100/80 dark:bg-neutra
   <Button type="submit" className="tpx-4 py-2 sm:px-5 ttnc-ButtonPrimary disabled:bg-opacity-70 bg-[#04868b] hover:bg-[#ef233c] text-neutral-50 rounded">Submit</Button>
 </form>
       </div>
+     
 )
 }
 

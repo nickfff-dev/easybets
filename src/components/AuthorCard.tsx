@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Button from "./Button";
 export interface AuthorCardProps {
   className?: string;
+  id: number | null;
   name: string;
   image: string;
   stake: string;
@@ -12,7 +13,7 @@ export interface AuthorCardProps {
 }
 
 
-const AuthorCard: FC<AuthorCardProps> = ({ className = "", name = "", image = "", stake = "", status = "", endDate = "", startDate = "" }) => {
+const AuthorCard: FC<AuthorCardProps> = ({ className = "", name = "", image = "", stake = "", status = "", endDate = "", startDate = "", id=null }) => {
   return (
     <>
    
@@ -45,7 +46,7 @@ const AuthorCard: FC<AuthorCardProps> = ({ className = "", name = "", image = ""
           sizeClass="px-4 py-2 sm:px-5"
         >
           <Link
-            to={`/${encodeURIComponent(name)}`}
+            to={`/${id}`}
           
           > Stake</Link>
         </Button>

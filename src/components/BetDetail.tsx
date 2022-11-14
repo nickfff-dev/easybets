@@ -2,6 +2,8 @@ import { FC } from "react";
 import AccordionInfo from "../components/AccordionInfo";
 import TimeCountDown from "../components/TimeCountdown";
 import Button from "../components/Button";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export interface BetDetailProps { 
   bet: {
@@ -10,7 +12,7 @@ export interface BetDetailProps {
   contractAddress: string;
   endDate: string;
     stake: string;
-   image: string;
+  image: string;
   }
   
 }
@@ -100,7 +102,7 @@ const BetDetail : FC<BetDetailProps> = ({ bet }) => {
           </div>
       </div>
     </div>
- 
+
   )
 }
 
