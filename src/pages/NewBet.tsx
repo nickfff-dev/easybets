@@ -51,7 +51,7 @@ const NewBet: FC<NewBetProps> = ({ className = "bg-neutral-100/80 dark:bg-neutra
         <label htmlFor="author" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#04868b] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Bet Author</label>
     </div>
   </div>
-  <Button type="submit" className="tpx-4 py-2 sm:px-5 ttnc-ButtonPrimary disabled:bg-opacity-70 bg-[#04868b] hover:bg-[#ef233c] text-neutral-50 rounded">Submit</Button>
+  <Button type="submit" className="  dark:text-white border bg-[#04868b] dark:bg-[#04868b]  border-green-500  text-white  dark:text-white dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800">Submit</Button>
 </form>
       </div>
      
