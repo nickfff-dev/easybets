@@ -31,7 +31,7 @@ const SectionHero2: FC<SectionHero2Props> = ({ className = "dark:text-white", ch
             <br />{" "}
 
           </span>
-          <Button className=" px-4 py-2 sm:px-5 ttnc-ButtonPrimary  bg-[#04868b]  dark:text-white dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800">
+          <Button className=" px-4 py-2 sm:px-5  bg-[#04868b] text-white  dark:text-white dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800">
             <span>Explore</span>
             <span>
               <svg className="w-5 h-5 ml-2.5" viewBox="0 0 24 24" fill="none">
