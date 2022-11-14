@@ -3,9 +3,6 @@ import AuthorCard from './AuthorCard';
 import data from '../data/bets'
 
 
-import BgGlassmorphism from './BgGlassMorphism';
-
-
 export interface CollectionCardsProps { 
   className?: string;
   sectionStyle?: "style1" | "style2";

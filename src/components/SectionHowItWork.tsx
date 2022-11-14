@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import  { FC } from "react";
 import VectorImg from "../images/VectorHIW.svg";
 import Img1 from "../images/connect.svg";
 import Img2 from "../images/find.svg";

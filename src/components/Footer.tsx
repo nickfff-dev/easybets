@@ -13,7 +13,7 @@ const widgetMenus: WidgetFooterMenu[] = [
     id: "5",
     title: "Getting started",
     menus: [
-      { href: "#", label: "Connect" },
+      { href: "/", label: "Connect" },
       { href: "/new-bet", label: "Create" },
       { href: "/", label: "Explore" },
     ],
@@ -23,18 +23,18 @@ const widgetMenus: WidgetFooterMenu[] = [
     id: "2",
     title: "Resources",
     menus: [
-      { href: "#", label: "Faqs" },
-      { href: "#", label: "Wallet" },
-      { href: "#", label: "Bets" },
+      { href: "/", label: "Faqs" },
+      { href: "/", label: "Wallet" },
+      { href: "/", label: "Bets" },
     ],
   },
   {
     id: "4",
     title: "Socials",
     menus: [
-      { href: "#", label: "Facebook" },
-      { href: "#", label: "Twitter" },
-      { href: "#", label: "Instagram" },
+      { href: "facebook.com", label: "Facebook" },
+      { href: "twitter.com", label: "Twitter" },
+      { href: "instagram.com", label: "Instagram" },
 
     ],
   },

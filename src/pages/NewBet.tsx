@@ -1,5 +1,4 @@
-import { FC, useState } from "react";
-import BackgroundSection from "../components/Background";
+import { FC} from "react";
 import Button from "../components/Button";
 import BgGlassmorphism from "../components/BgGlassMorphism"
 
@@ -11,7 +10,7 @@ export interface NewBetProps {
 }
 
 const NewBet: FC<NewBetProps> = ({ className = "bg-neutral-100/80 dark:bg-neutral-900" }) => {
-  const [betName, setBetName] = useState("");
+
   
   return (
 

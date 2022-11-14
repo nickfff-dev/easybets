@@ -6,8 +6,7 @@ import SectionHero2 from "../components/SectionHero2"
 import SectionHowItWork from "../components/SectionHowItWork";
 import CollectionCards from "../components/CollectionCards";
 import SectionSubscribe from "../components/SectionSubscribe";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+
 
 
 export interface HomepageProps { 

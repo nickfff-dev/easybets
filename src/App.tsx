@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect } from 'react';
+
 import Homepage from './pages/Homepage';
 import NewBet from './pages/NewBet';
 import Header from './components/Header';
@@ -28,7 +28,7 @@ function App() {
 
         {
           data.map((bet) => {
-            const route = encodeURIComponent(bet.title)
+      
             return <Route key={bet.id}  path={`/${bet.id}`} element={<BetDetail bet={bet}/>} />
           }
            

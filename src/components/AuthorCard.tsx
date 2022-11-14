@@ -17,13 +17,15 @@ const AuthorCard: FC<AuthorCardProps> = ({ className = "", name = "", image = ""
   return (
     <>
    
-      <a
+      <button
        
         className={`nc-CardAuthorBox relative flex flex-col items-center justify-center text-center px-3 py-5 sm:px-6 sm:py-7  [ nc-box-has-hover ] [ nc-dark-box-bg-has-hover ] ${className}`}
         data-nc-id="CardAuthorBox"
       >
 
-       <div className="relative flex-shrink-0 h-36"><div className="nc-NcImage flex h-full w-full flex-shrink-0 rounded-3xl overflow-hidden"><img className="object-cover w-full h-full" src={image} /></div> </div>
+        <div className="relative flex-shrink-0 h-36">
+          <div className="nc-NcImage flex h-full w-full flex-shrink-0 rounded-3xl overflow-hidden">
+            <img className="object-cover w-full h-full" src={image} alt={name} /></div> </div>
         <div className="mt-2.5 flex flex-col items-center justify-between">
           <h2 className={`text-base font-semibold  text-[#04868b] flex items-center dark:text-white`}>
 
@@ -50,7 +52,7 @@ const AuthorCard: FC<AuthorCardProps> = ({ className = "", name = "", image = ""
           
           > Stake</Link>
         </Button>
-      </a></>
+      </button></>
   )
 }
 

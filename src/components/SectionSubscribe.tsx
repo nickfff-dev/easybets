@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import Button from "./Button";
 import {ArrowRightCircleIcon } from "@heroicons/react/24/solid";
 import Contactus from "../images/Contact us.svg"
@@ -50,7 +50,7 @@ const SectionSubscribe: FC<SectionSubscribeProps> = ({ className = "dark:text-wh
         </form>
       </div>
       <div className="flex-grow">
-        <img src={Contactus} />
+        <img src={Contactus} alt="contactus" />
       </div>
 
     </div>

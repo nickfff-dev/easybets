@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import  { FC } from "react";
 import SwitchDarkMode from "./SwitchDarkMode"
 import Button from "./Button";
 import { Link } from "react-router-dom";

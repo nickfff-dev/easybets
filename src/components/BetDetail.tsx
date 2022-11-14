@@ -2,8 +2,7 @@ import { FC } from "react";
 import AccordionInfo from "../components/AccordionInfo";
 import TimeCountDown from "../components/TimeCountdown";
 import Button from "../components/Button";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+
 
 export interface BetDetailProps { 
   bet: {
@@ -20,12 +19,12 @@ export interface BetDetailProps {
 
 const BetDetail : FC<BetDetailProps> = ({ bet }) => {
   return (
-    <div className="container abstract   pt-24 bg-neutral-100/80 dark:bg-neutral-900 flex ">
+    <div className="container abstract pt-24 bg-neutral-100/80 dark:bg-neutral-900 flex ">
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14">
         <div className="space-y-8 lg:space-y-10">
           <div className="relative">
             <div className="aspect-w-11 aspect-h-12 rounded-3xl overflow-hidden">
-              <img src={bet.image} alt="bet" />
+              <img src={bet.image} alt={ bet.title} />
             </div>
 
           </div>
