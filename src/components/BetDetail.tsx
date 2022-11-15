@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import AccordionInfo from "../components/AccordionInfo";
 import TimeCountDown from "../components/TimeCountdown";
 import Button from "../components/Button";
@@ -18,7 +18,29 @@ export interface BetDetailProps {
 }
 
 
-const BetDetail : FC<BetDetailProps> = ({ bet }) => {
+const BetDetail: FC<BetDetailProps> = ({ bet }) => {
+  const [ethPrice, setEthPrice] = useState(null)
+  
+  const convertEthtoUsd = async () => {
+    fetch("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD", {
+     
+      
+    }).then((res) => {
+      res.json().then((data) => {
+        setEthPrice(data.USD)
+        console.log(data.USD, "API")
+        
+      })
+    })
+    
+  }
+
+  useEffect(() => {
+    if (ethPrice === null) {
+      convertEthtoUsd()
+      console.log(ethPrice, "state")
+    }
+  },[ethPrice])
   return (
     <div className="container abstract pt-24 bg-neutral-100/80 dark:bg-neutral-900 flex ">
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14">
@@ -53,13 +75,15 @@ const BetDetail : FC<BetDetailProps> = ({ bet }) => {
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between">
             <div className="flex-1 flex flex-col sm:flex-row items-baseline p-6 border-2 border-[#04868b]/50 rounded-xl relative">
               <span className="absolute bottom-full translate-y-1 py-1 px-1.5 bg-white dark:bg-neutral-900 text-sm text-neutral-500 dark:text-neutral-400">
-                Current Bid
+                Min Stake
               </span>
               <span className="text-3xl xl:text-4xl font-semibold text-[#04868b]">
                 {bet.stake} ETH
               </span>
               <span className="text-lg text-neutral-400 sm:ml-5">
-                ( ≈ $3,221.22)
+                    ( ≈ ${
+                      ethPrice !=null ?(Math.ceil(Number(bet.stake) * ethPrice ).toLocaleString('en-US')) : ("calculating...")
+                })
               </span>
             </div>
 

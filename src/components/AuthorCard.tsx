@@ -38,8 +38,8 @@ const AuthorCard: FC<AuthorCardProps> = ({ className = "", name = "", image = ""
             {` `}
     
 
-            <span className=" text-neutral-400 font-normal">Start: {endDate}</span>
-            <span className="text-neutral-400 font-normal "> EndDate: {`${hasenddate}`}</span>
+            <span className=" text-neutral-400 font-normal">Stake: {stake} ETH</span>
+ 
           </div>
         </div>
         {/* <FollowButton className="mt-3" /> */}

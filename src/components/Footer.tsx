@@ -15,7 +15,7 @@ const widgetMenus: WidgetFooterMenu[] = [
     menus: [
       { href: "/", label: "Connect" },
       { href: "/new-bet", label: "Create" },
-      { href: "/", label: "Explore" },
+      { href: "/explore", label: "Explore" },
     ],
   },
 
@@ -23,9 +23,8 @@ const widgetMenus: WidgetFooterMenu[] = [
     id: "2",
     title: "Resources",
     menus: [
-      { href: "/", label: "Faqs" },
       { href: "/", label: "Wallet" },
-      { href: "/", label: "Bets" },
+      { href: "/explore", label: "Bets" },
     ],
   },
   {

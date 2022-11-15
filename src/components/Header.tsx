@@ -15,7 +15,7 @@ const Header: FC<HeaderProps> =() =>{
       className={`ttnc-logo inline-block text-primary-6000`}
     >
 
-      <h1 className="dark:text-white text-[#04868b] font-bold lg:text-2xl">easyBets</h1>
+      <h1 className="dark:text-white text-[#04868b] font-bold lg:text-2xl">EasyBets</h1>
     </a>
    
         </div>
