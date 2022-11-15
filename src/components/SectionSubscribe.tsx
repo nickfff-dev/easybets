@@ -43,7 +43,7 @@ const SectionSubscribe: FC<SectionSubscribeProps> = ({ className = "dark:text-wh
             type="submit"
             className="  rounded-full  -left-16 disabled:bg-opacity-70   text-neutral-50  "
           >
-            <ArrowRightCircleIcon className=" w-11 h-11 text-white" fill="#04868b"/>
+            <ArrowRightCircleIcon className="w-11 h-11 text-white fill-[#04868b]"/>
             
           </Button>
         </label>

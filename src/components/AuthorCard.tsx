@@ -10,10 +10,11 @@ export interface AuthorCardProps {
   status: string;
   endDate: string;
   startDate: string;
+  hasenddate: boolean;
 }
 
 
-const AuthorCard: FC<AuthorCardProps> = ({ className = "", name = "", image = "", stake = "", status = "", endDate = "", startDate = "", id=null }) => {
+const AuthorCard: FC<AuthorCardProps> = ({ className = "", name = "", image = "", stake = "", status = "", endDate = "", startDate = "", id=null , hasenddate=false}) => {
   return (
     <>
    
@@ -38,7 +39,7 @@ const AuthorCard: FC<AuthorCardProps> = ({ className = "", name = "", image = ""
     
 
             <span className=" text-neutral-400 font-normal">Start: {endDate}</span>
-            <span className="text-neutral-400 font-normal "> EndDate: {startDate}</span>
+            <span className="text-neutral-400 font-normal "> EndDate: {`${hasenddate}`}</span>
           </div>
         </div>
         {/* <FollowButton className="mt-3" /> */}

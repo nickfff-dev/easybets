@@ -1,4 +1,4 @@
-import { FC} from "react";
+import { FC, useState} from "react";
 import Button from "../components/Button";
 import BgGlassmorphism from "../components/BgGlassMorphism"
 
@@ -10,7 +10,7 @@ export interface NewBetProps {
 }
 
 const NewBet: FC<NewBetProps> = ({ className = "bg-neutral-100/80 dark:bg-neutral-900" }) => {
-
+const [hasenddate, setHasEndDate] = useState(false);
   
   return (
 
@@ -29,21 +29,29 @@ const NewBet: FC<NewBetProps> = ({ className = "bg-neutral-100/80 dark:bg-neutra
   <div className="relative z-0 mb-6 w-full group">
       <textarea  name="description" id="description" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#04868b] focus:outline-none focus:ring-0 focus:border-[#04868b] peer" placeholder=" " />
       <label htmlFor="description" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#04868b] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Bet Description</label>
-  </div>
-
-  <div className="grid md:grid-cols-2 md:gap-6">
-    <div className="relative z-0 mb-6 w-full group">
+  </div> <div className="relative z-0 mb-6 w-full group">
+          <input type="checkbox" onChange={ 
+            () => setHasEndDate(!hasenddate)
+          } name="hasenddate" className="focus:ring-action-primary h-6 w-6 text-primary-500 border-primary rounded border-neutral-500 bg-white dark:bg-neutral-700  dark:checked:bg-primary-500 focus:ring-primary-500" />
+        <label htmlFor="hasenddate" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-white duration-300 transform -translate-y-2.5 translate-x-2.5 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#04868b] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Has EndDate?</label></div>
+        <div className="grid md:grid-cols-2 md:gap-6">
+          
+        <div className="relative z-0 mb-6 w-full group">
+        
         <input type="date" name="startDate" id="date" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#04868b] focus:outline-none focus:ring-0 focus:border-[#04868b] peer"  />
         <label htmlFor="startDate" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#04868b] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Start Date</label>
     </div>
     <div className="relative z-0 mb-6 w-full group">
-        <input type="date" name="endDate" id="endDate" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#04868b] focus:outline-none focus:ring-0 focus:border-[#04868b] peer" placeholder=" " />
-        <label htmlFor="endDate" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#04868b] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">End Date</label>
+            <input type="date" name="endDate" id="endDate" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 dark:disabled:text-primary-6000/25 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#04868b] focus:outline-none focus:ring-0 focus:border-[#04868b] peer" disabled={ 
+              hasenddate ? false : true
+            } />
+        <label htmlFor="endDate" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-white duration-300 transform -translate-y-6 scale-75  top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#04868b] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">End Date</label>
     </div>
   </div>
   <div className="grid md:grid-cols-2 md:gap-6 ">
     <div className="relative z-0 mb-6 w-full group">
-        <input type="number"  name="stake" id="stake" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#04868b] focus:outline-none focus:ring-0 focus:border-[#04868b] peer" />
+            <input type="number" name="stake" id="stake" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#04868b] focus:outline-none focus:ring-0 focus:border-[#04868b] peer" />
+            
         <label htmlFor="stake" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#04868b] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Min Stake</label>
     </div>
     <div className="relative z-0 mb-6 w-full group">

@@ -11,7 +11,8 @@ export interface BetDetailProps {
   contractAddress: string;
   endDate: string;
     stake: string;
-  image: string;
+    image: string;
+    hasenddate: boolean
   }
   
 }
@@ -43,9 +44,11 @@ const BetDetail : FC<BetDetailProps> = ({ bet }) => {
             {bet.title}
           </h2>
     </div>
-    <div className="py-9">
+            {
+              bet.hasenddate ? ( <div className="py-9">
               <TimeCountDown endDate={bet.endDate} />
-    </div>
+    </div>): (null) 
+   }
          <div className="pb-9 pt-14">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between">
             <div className="flex-1 flex flex-col sm:flex-row items-baseline p-6 border-2 border-[#04868b]/50 rounded-xl relative">

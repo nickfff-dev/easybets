@@ -21,7 +21,7 @@ const Header: FC<HeaderProps> =() =>{
         </div>
         <div className="flex-shrink-0 flex items-center justify-end text-[#04868b] dark:text-neutral-100 space-x-1">
           <div className="hidden items-center xl:flex space-x-2">
-            <span>Explore</span>
+            <span><Link to="/explore">Explore</Link></span>
             <div className="hidden sm:block h-10"></div>
            
             <button

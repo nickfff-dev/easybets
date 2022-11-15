@@ -5,18 +5,19 @@ import Button from "../components/Button";
 
 export interface BetDetailProps { 
   bet: {
-    title: string;
+  title: string;
   description: string;
   contractAddress: string;
   endDate: string;
-    stake: string;
-   image: string;
+  stake: string;
+  image: string;
+  hasenddate: boolean;
   }
   
 }
 
 
-const BetDetail : FC<BetDetailProps> = ({ bet }) => {
+const BetDetail: FC<BetDetailProps> = ({ bet }) => {
   return (
     <div className="container abstract   pt-24 bg-neutral-100/80 dark:bg-neutral-900 flex ">
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14">

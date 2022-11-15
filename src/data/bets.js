@@ -8,6 +8,7 @@ const data = [{
   endDate: '2022-12-31',
   startDate: '2021-12-31',
   contractAddress: '0x50f5474724e0ee42d9a4e711ccfb275809fd6d4a',
+  hasenddate: true,
 },
   {
     
@@ -19,6 +20,7 @@ const data = [{
     status: 'Open',
     endDate: '2022-12-31',
     startDate: '2021-12-31',
+    hasenddate: true,
     contractAddress: '0x50f5474724e0ee42d9a4e711ccfb275809fd6d4a',
   },
   {
@@ -30,6 +32,7 @@ const data = [{
     status: 'Open',
     endDate: '2022-12-31',
     startDate: '2021-12-31',
+    hasenddate: true,
     contractAddress: '0x50f5474724e0ee42d9a4e711ccfb275809fd6d4a',
   },
   {
@@ -40,7 +43,8 @@ const data = [{
     image: 'https://images.pexels.com/photos/88652/pexels-photo-88652.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     stake: '1.549',
     status: 'Open',
-    endDate: '2022-12-31',
+        endDate: '2022-12-31',
+    hasenddate: false,
     startDate: '2021-12-31',
     contractAddress: '0x50f5474724e0ee42d9a4e711ccfb275809fd6d4a',
   

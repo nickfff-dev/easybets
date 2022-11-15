@@ -11,10 +11,10 @@ const TimeCountDown: FC<TimeCountdownProps> = ({endDate}) => {
 
   
     let endDatecalc = new Date(endDate);
-    console.log(endDatecalc);
+  
     let differences = endDatecalc.getTime() - new Date().getTime();
   
-    console.log(differences);
+
   
     let timeLeft = {
       days: 0,
