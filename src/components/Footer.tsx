@@ -52,8 +52,7 @@ const Footer: React.FC = () => {
                 key={index}
                 className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white"
                 href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
+               
               >
                 {item.label}
               </a>
