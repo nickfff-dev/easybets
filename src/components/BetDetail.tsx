@@ -21,7 +21,7 @@ export interface BetDetailProps {
 const BetDetail: FC<BetDetailProps> = ({ bet }) => {
 
   return (
-    <div className="container abstract pt-24 bg-neutral-100/80 dark:bg-neutral-900 flex ">
+    <div className="lg:container p-24 abstract pt-24 bg-neutral-100/80 dark:bg-neutral-900 flex ">
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14">
         <div className="space-y-8 lg:space-y-10">
           <div className="relative">
