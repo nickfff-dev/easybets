@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 import AccordionInfo from "../components/AccordionInfo";
 import TimeCountDown from "../components/TimeCountdown";
 import Button from "../components/Button";
@@ -19,28 +19,7 @@ export interface BetDetailProps {
 
 
 const BetDetail: FC<BetDetailProps> = ({ bet }) => {
-  const [ethPrice, setEthPrice] = useState(null)
-  
-  const convertEthtoUsd = async () => {
-    fetch("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD", {
-     
-      
-    }).then((res) => {
-      res.json().then((data) => {
-        setEthPrice(data.USD)
-        console.log(data.USD, "API")
-        
-      })
-    })
-    
-  }
 
-  useEffect(() => {
-    if (ethPrice === null) {
-      convertEthtoUsd()
-      console.log(ethPrice, "state")
-    }
-  },[ethPrice])
   return (
     <div className="container abstract pt-24 bg-neutral-100/80 dark:bg-neutral-900 flex ">
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14">
@@ -80,11 +59,7 @@ const BetDetail: FC<BetDetailProps> = ({ bet }) => {
               <span className="text-3xl xl:text-4xl font-semibold text-[#04868b]">
                 {bet.stake} ETH
               </span>
-              <span className="text-lg text-neutral-400 sm:ml-5">
-                    ( ≈ ${
-                      ethPrice !=null ?(Math.ceil(Number(bet.stake) * ethPrice ).toLocaleString('en-US')) : ("calculating...")
-                })
-              </span>
+          
             </div>
 
           
